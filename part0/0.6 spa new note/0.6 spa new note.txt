@@ -1,0 +1,17 @@
+
+title new note
+note over browser:
+browser executes the event handler
+that does the following:
+1. create new note with timestamp
+2. add it to the notes list
+3. rerenders the notes list
+4. send the new note to the server
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: HTTP 201 {"message":"note created"}
+
+note over browser:
+browser console logs the reponse message
+end note
